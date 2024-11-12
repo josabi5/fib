@@ -1,7 +1,9 @@
 import argparse
 import sys
 
+from functools import cache
 
+@cache
 def fibonacci_iterative(n: int) -> int:
     """
     Computes the n-th Fibonacci number.
@@ -23,9 +25,7 @@ def fibonacci_iterative(n: int) -> int:
     return result1
 
 
-cache = {}  # esto es para guardar los valoers que crees y si los necesitas de nuevo, no volver
-
-
+@cache
 def fibonacci_recursive(n: int) -> int:
     """
         Computes the n-th Fibonacci number.
