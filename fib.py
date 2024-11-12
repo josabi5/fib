@@ -1,12 +1,14 @@
 import argparse
 import sys
 
+from functools import cache
 
+@cache
 def fibonacci_iterative(n: int) -> int:
     """
-    Computes the n-th Fibonacci number.
-    :param n: n-th Fibonacci numner,
-    :return: Ther m-th Fibonacci number
+    Computes the i-th Fibonacci number.
+    :param n: i-th Fibonacci numner,
+    :return: Ther i-th Fibonacci number
     """
     if n < 0:
         raise ValueError("n must be gerater than or equal to 0.")
@@ -23,9 +25,7 @@ def fibonacci_iterative(n: int) -> int:
     return result1
 
 
-cache = {}  # esto es para guardar los valoers que crees y si los necesitas de nuevo, no volver
-
-
+@cache
 def fibonacci_recursive(n: int) -> int:
     """
         Computes the n-th Fibonacci number.
