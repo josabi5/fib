@@ -28,8 +28,8 @@ def fibonacci_iterative(n: int) -> int:
 @cache
 def fibonacci_recursive(n: int) -> int:
     """
-        Computes the n-th Fibonacci number.
-        :param n: n-th Fibonacci numner,
+        Computes the i-th Fibonacci number.
+        :param n: i-th Fibonacci numner,
         :return: Ther m-th Fibonacci number
         """
     if n < 0:
